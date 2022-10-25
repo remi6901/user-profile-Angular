@@ -1,0 +1,10 @@
+<section>
+    <img class="avatar" [src] = "user.photo" alt = "avatar">
+    <h2>Nom : {{user.name}}</h2>
+    <h2>Prenom : {{user.firstName}}</h2>
+    <p>Citation : {{citation}}</p>
+    <input [(ngModel)] = "citation"/>
+    <br/>
+    <button (click) = "isVisible = !isVisible">{{isVisible ? "Afficher l'age" : "Cacher l'age"}}</button>
+    <h5 [hidden] = "isVisible">Age : {{user.age}}</h5>
+</section>
